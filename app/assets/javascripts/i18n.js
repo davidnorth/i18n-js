@@ -13,6 +13,10 @@
 //
 
 ;(function(factory) {
+  // Node global
+  if (typeof global !== 'undefined') {
+    global.I18n = factory(this);
+  }
   if (typeof module !== 'undefined' && module.exports) {
     // Node/CommonJS
     module.exports = factory(this);
